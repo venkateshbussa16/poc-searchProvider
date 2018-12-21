@@ -56,12 +56,12 @@ public class ProviderController {
 		if (id != null) {
 			try {
 				providerService.deleteProvider(Long.parseLong(id));
-				return new ResponseEntity<>("Record Deleted Sucessfully", HttpStatus.OK);
+				return new ResponseEntity<>(HttpStatus.OK);
 			} catch (Exception e) {
-				return new ResponseEntity<>("No records found with ID", HttpStatus.OK);
+				return new ResponseEntity<>(HttpStatus.OK);
 			}
 		}
-		return new ResponseEntity<>("No records found with null", HttpStatus.OK);
+		return new ResponseEntity<>(HttpStatus.OK);
 	}
 
 }
