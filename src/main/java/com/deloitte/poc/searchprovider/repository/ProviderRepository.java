@@ -11,12 +11,12 @@ import com.deloitte.poc.searchprovider.bean.Provider;
 @Repository
 public interface ProviderRepository extends CrudRepository<Provider, Long> {
 
-	@Query("select p from Provider p where p.providerID like %:providerId%")
+	@Query("select p from Provider p where p.providerID = :providerId")
 	public List<Provider> findByProviderId(String providerId);
 
-	@Query("select p from Provider p where p.pfin like %:pfin%")
+	@Query("select p from Provider p where p.pfin =:pfin")
 	public List<Provider> findByPfin(String pfin);
 
-	@Query("select p from Provider p where p.license like %:license%")
+	@Query("select p from Provider p where p.license=:license")
 	public List<Provider> findByLicense(String license);
 }

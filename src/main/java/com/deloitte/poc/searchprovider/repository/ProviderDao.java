@@ -29,4 +29,8 @@ public class ProviderDao {
 		return providerRepository.save(provider);
 	}
 
+	public void deleteProvider(Long id) {
+		providerRepository.deleteById(id);
+	}
+
 }

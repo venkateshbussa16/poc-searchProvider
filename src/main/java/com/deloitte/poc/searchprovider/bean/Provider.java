@@ -16,32 +16,45 @@ public class Provider {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
+	
 	@Column(name = "FIRST_NAME")
-	private String firstName;
+	private String fname;
+	
 	@Column(name = "MIDDLE_NAME")
-	private String middleName;
+	private String mname;
+	
 	@Column(name = "LAST_NAME")
-	private String lastName;
+	private String lname;
+	
 	@Column(name = "SSN")
 	private String ssn;
+	
 	@Column(name = "DOB")
 	private Date dob;
+	
 	@Column(name = "PFIN")
 	private String pfin;
+	
 	@Column(name = "PROVIDER_ID")
 	private String providerID;
+	
 	@Column(name = "LICENSE")
 	private String license;
+	
 	@Column(name = "GENDER")
 	private String gender;
+	
 	@Column(name = "ADDRESS_ID")
 	private Integer addressId;
+	
 	@Column(name = "PREFIX")
 	private String prefix;
+	
 	@Column(name = "PRIMARY_SPECIALIZATION")
-	private String primarySpecialization;
+	private String pspecial;
+	
 	@Column(name = "SECONDARY_SPECIALIZATION")
-	private String secondarySpecialization;
+	private String sspecial;
 
 	public Long getId() {
 		return id;
@@ -51,28 +64,28 @@ public class Provider {
 		this.id = id;
 	}
 
-	public String getFirstName() {
-		return firstName;
+	public String getFname() {
+		return fname;
 	}
 
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setFname(String fname) {
+		this.fname = fname;
 	}
 
-	public String getMiddleName() {
-		return middleName;
+	public String getMname() {
+		return mname;
 	}
 
-	public void setMiddleName(String middleName) {
-		this.middleName = middleName;
+	public void setMname(String mname) {
+		this.mname = mname;
 	}
 
-	public String getLastName() {
-		return lastName;
+	public String getLname() {
+		return lname;
 	}
 
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setLname(String lname) {
+		this.lname = lname;
 	}
 
 	public String getSsn() {
@@ -139,29 +152,20 @@ public class Provider {
 		this.prefix = prefix;
 	}
 
-	public String getPrimarySpecialization() {
-		return primarySpecialization;
+	public String getPspecial() {
+		return pspecial;
 	}
 
-	public void setPrimarySpecialization(String primarySpecialization) {
-		this.primarySpecialization = primarySpecialization;
+	public void setPspecial(String pspecial) {
+		this.pspecial = pspecial;
 	}
 
-	public String getSecondarySpecialization() {
-		return secondarySpecialization;
+	public String getSspecial() {
+		return sspecial;
 	}
 
-	public void setSecondarySpecialization(String secondarySpecialization) {
-		this.secondarySpecialization = secondarySpecialization;
+	public void setSspecial(String sspecial) {
+		this.sspecial = sspecial;
 	}
-
-	@Override
-	public String toString() {
-		return "Provider [id=" + id + ", firstName=" + firstName + ", middleName=" + middleName + ", lastName="
-				+ lastName + ", ssn=" + ssn + ", dob=" + dob + ", pfin=" + pfin + ", providerID=" + providerID
-				+ ", license=" + license + ", gender=" + gender + ", addressId=" + addressId + ", prefix=" + prefix
-				+ ", primarySpecialization=" + primarySpecialization + ", secondarySpecialization="
-				+ secondarySpecialization + "]";
-	}
-
+	
 }

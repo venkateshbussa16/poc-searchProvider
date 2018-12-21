@@ -49,4 +49,13 @@ public class ProviderService {
 		return null;
 	}
 
+	public void deleteProvider(Long id) {
+		
+		try {
+			providerDao.deleteProvider(id);
+		} catch (Exception e) {
+		}
+
+	}
+
 }
